@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="280.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoanStatusControl">
+    <children>
+        <Label fx:id="loanLabel" layoutX="14.0" layoutY="7.0" prefHeight="15.0" prefWidth="413.0" text="Loans" />
+        <TableView fx:id="loanTable" layoutX="14.0" layoutY="35.0" prefHeight="191.0" prefWidth="413.0">
+            <columns>
+                <TableColumn fx:id="loanType" prefWidth="75.0" text="Type" />
+                <TableColumn fx:id="loanAmount" editable="false" prefWidth="75.0" sortable="false" text="Amount" />
+                <TableColumn fx:id="loanStatus" prefWidth="75.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button fx:id="returnToMenuButton" layoutX="308.0" layoutY="243.0" mnemonicParsing="false" onAction="#returnToMenuButtonClicked" text="Return to Menu" />
+    </children>
+</AnchorPane>

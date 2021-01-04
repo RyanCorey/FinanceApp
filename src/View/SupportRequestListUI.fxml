@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SupportRequestListControl">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Support Requests" />
+        <TableView fx:id="supportRequestTable" layoutX="14.0" layoutY="38.0" prefHeight="379.0" prefWidth="736.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="38.0">
+            <columns>
+                <TableColumn fx:id="requestDate" prefWidth="215.0" text="Date" />
+                <TableColumn fx:id="contactName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="contactEmail" prefWidth="200.0" text="Email" />
+                <TableColumn fx:id="request" prefWidth="400.0" text="Request" />
+            </columns>
+        </TableView>
+        <Button fx:id="returnToMenuButton" layoutX="623.0" layoutY="432.0" mnemonicParsing="false" onAction="#returnToMenuButtonClicked" text="Return To Menu" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="186.0" />
+      <Button fx:id="viewSupportRequestButton" layoutX="759.0" layoutY="432.0" mnemonicParsing="false" onAction="#viewSupportRequestButtonClicked" text="View Support Request" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="14.0" />
+    </children>
+</AnchorPane>

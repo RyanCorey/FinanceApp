@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateAccountControl">
+    <children>
+        <TextField fx:id="usernameText" layoutX="127.0" layoutY="21.0" promptText="Username" />
+      <PasswordField fx:id="passwordText" layoutX="127.0" layoutY="55.0" onKeyReleased="#checkPasswordStrength" promptText="Password" />
+        <TextField fx:id="firstNameText" layoutX="127.0" layoutY="89.0" promptText="First Name" />
+        <Label layoutX="34.0" layoutY="26.0" text="Username:" />
+        <Label layoutX="41.0" layoutY="60.0" prefHeight="15.0" prefWidth="71.0" text="Password:" />
+        <Label layoutX="41.0" layoutY="94.0" prefHeight="15.0" prefWidth="71.0" text="Name:" />
+        <TextField fx:id="middleInitialText" layoutX="311.0" layoutY="89.0" prefHeight="25.0" prefWidth="45.0" promptText="MI" />
+        <TextField fx:id="lastNameText" layoutX="372.0" layoutY="89.0" promptText="Last Name" />
+        <Label layoutX="41.0" layoutY="127.0" text="Address:" />
+        <TextField fx:id="address1Text" layoutX="127.0" layoutY="122.0" prefHeight="25.0" prefWidth="363.0" promptText="Line 1" />
+        <TextField fx:id="address2Text" layoutX="127.0" layoutY="155.0" prefHeight="25.0" prefWidth="363.0" promptText="Line 2" />
+        <TextField fx:id="cityText" layoutX="127.0" layoutY="188.0" promptText="City" />
+        <TextField fx:id="zipText" layoutX="428.0" layoutY="188.0" prefHeight="25.0" prefWidth="125.0" promptText="Zip" />
+        <ComboBox fx:id="stateText" layoutX="322.0" layoutY="188.0" prefHeight="25.0" prefWidth="77.0" promptText="State" />
+        <Label layoutX="34.0" layoutY="240.0" text="Birth Date:" />
+        <DatePicker fx:id="dobText" layoutX="127.0" layoutY="229.0" prefHeight="25.0" prefWidth="171.0" promptText="Date Of Birth" />
+        <Label layoutX="371.0" layoutY="234.0" text="SSN:" />
+        <TextField fx:id="ssnText" layoutX="413.0" layoutY="229.0" prefHeight="25.0" prefWidth="137.0" promptText="###-##-####" />
+        <Label layoutX="67.0" layoutY="277.0" text="Phone:" />
+        <TextField fx:id="phoneText" layoutX="127.0" layoutY="273.0" promptText="(###) ###-####" />
+        <Label layoutX="332.0" layoutY="277.0" text="Email:" />
+        <TextField fx:id="emailText" layoutX="389.0" layoutY="273.0" promptText="john.doe@email.com" />
+        <Button fx:id="createAccountButton" defaultButton="true" layoutX="415.0" layoutY="354.0" mnemonicParsing="false" onAction="#createAccount" text="Create Account" />
+        <Button fx:id="cancelButton" cancelButton="true" layoutX="328.0" layoutY="354.0" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" />
+        <Label fx:id="passwordStrengthLabel" layoutX="338.0" layoutY="26.0" text="Password Strength" visible="false" />
+        <TextField fx:id="captcha" layoutX="127.0" layoutY="305.0" onKeyReleased="#checkCaptcha" promptText="2 + 2 = ?" />
+        <Label fx:id="captchaOK" layoutX="301.0" layoutY="310.0" text="OK" textFill="#65f207" visible="false" />
+        <Label fx:id="captchaFail" layoutX="359.0" layoutY="310.0" text="Try Again" textFill="RED" visible="false" />
+        <ImageView fx:id="weakImage" fitHeight="8.0" fitWidth="71.0" layoutX="299.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@weak.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="mediumImage" fitHeight="8.0" fitWidth="71.0" layoutX="360.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@medium.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="strongImage" fitHeight="8.0" fitWidth="71.0" layoutX="421.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <image>
+                <Image url="@strong.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="strengthLabel" layoutX="373.0" layoutY="69.0" text="Weak" textFill="RED" visible="false" />
+        <Label layoutX="44.0" layoutY="310.0" text="CAPTCHA:" />
+    </children>
+</AnchorPane>

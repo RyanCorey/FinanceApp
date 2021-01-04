@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="372.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SupportRequestControl">
+    <children>
+        <Label layoutX="15.0" layoutY="14.0" text="Name" />
+        <Label layoutX="16.0" layoutY="46.0" text="Email" />
+        <TextField fx:id="nameText" layoutX="66.0" layoutY="9.0" prefHeight="25.0" prefWidth="263.0" />
+        <TextField fx:id="emailText" layoutX="66.0" layoutY="41.0" prefHeight="25.0" prefWidth="263.0" />
+        <TextArea fx:id="requestText" layoutX="16.0" layoutY="100.0" prefHeight="221.0" prefWidth="501.0" promptText="Describe your request or issue here" wrapText="true" />
+        <Label layoutX="17.0" layoutY="77.0" text="Support Request:" />
+        <Button fx:id="submitButton" defaultButton="true" layoutX="455.0" layoutY="335.0" mnemonicParsing="false" onAction="#submitButtonClicked" text="Submit" />
+        <Button fx:id="cancelButton" cancelButton="true" layoutX="384.0" layoutY="335.0" mnemonicParsing="false" onAction="#cancelButtonClicked" text="Cancel" />
+    </children>
+</AnchorPane>

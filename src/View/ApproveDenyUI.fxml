@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ApproveDenyControl">
+    <children>
+        <Label fx:id="loanTypeLabel" layoutX="14.0" layoutY="14.0" text="Loan Type:" />
+        <Label fx:id="applicantNameLabel" layoutX="14.0" layoutY="39.0" text="Applicant Name:" />
+        <Label fx:id="applicationDateLabel" layoutX="353.0" layoutY="39.0" text="Application Date:" />
+        <Label fx:id="loanAmountLabel" layoutX="14.0" layoutY="69.0" text="Loan Amount:" />
+        <Label fx:id="loanPurposeLabel" alignment="TOP_LEFT" layoutX="14.0" layoutY="97.0" prefHeight="66.0" prefWidth="519.0" text="Loan Purpose:" />
+        <Label fx:id="creditRatingLabel" layoutX="16.0" layoutY="171.0" text="Credit Rating:" />
+        <Label fx:id="interestRateLabel" layoutX="353.0" layoutY="171.0" text="Interest Rate:" />
+        <Label fx:id="loanTermLabel" layoutX="16.0" layoutY="200.0" text="Loan Term:" />
+        <Label fx:id="monthlyPaymentLabel" layoutX="353.0" layoutY="200.0" text="Monthly Payment:" />
+        <Label fx:id="extraLabel1" layoutX="16.0" layoutY="230.0" text="Business Name:" />
+        <Label fx:id="extraLabel2" alignment="TOP_LEFT" layoutX="16.0" layoutY="256.0" prefHeight="78.0" prefWidth="458.0" text="Business Address:" />
+        <Button fx:id="returnToListButton" layoutX="99.0" layoutY="334.0" mnemonicParsing="false" onAction="#returnToListButtonClicked" text="Return To Loan List" />
+        <Button fx:id="approveLoanButton" layoutX="322.0" layoutY="334.0" mnemonicParsing="false" onAction="#approveLoanClicked" text="Approve Loan" />
+        <Button fx:id="denyLoanButton" layoutX="418.0" layoutY="334.0" mnemonicParsing="false" onAction="#denyLoanClicked" text="Deny Loan" />
+    </children>
+</AnchorPane>
